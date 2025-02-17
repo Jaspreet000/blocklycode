@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 antialiased min-h-screen;
+  }
+}
+
+@layer components {
+  .btn-icon {
+    @apply inline-flex items-center space-x-2 px-4 py-2 rounded-lg font-medium 
+           transition-all duration-200 bg-white hover:bg-gray-50 
+           text-gray-700 border border-gray-200/50 shadow-sm
+           hover:border-gray-300/50 hover:shadow-md;
+  }
+
+  .btn-run {
+    @apply inline-flex items-center space-x-2 px-6 py-2.5 rounded-lg font-medium 
+           transition-all duration-200 bg-primary text-white shadow-sm
+           hover:shadow-md hover:shadow-primary/20 border border-primary/20;
+  }
+
+  .btn-reset {
+    @apply p-2.5 rounded-lg transition-all duration-200 
+           bg-white text-gray-500 hover:text-red-500
+           border border-gray-200/50 shadow-sm hover:shadow-md
+           hover:border-red-200/50 hover:bg-red-50;
+  }
+
+  /* Modern Block Design */
+  .blocklyMainBackground {
+    @apply stroke-none;
+  }
+
+  .blocklyToolboxDiv {
+    @apply bg-transparent backdrop-blur-md border-0 !important;
+  }
+
+  /* Block Category Styling */
+  .blocklyTreeRow {
+    @apply m-2 p-3 rounded-lg transition-all duration-200 
+           border border-transparent hover:border-primary/20 
+           hover:bg-primary/5 !important;
+  }
+
+  .blocklyTreeLabel {
+    @apply font-medium tracking-wide text-gray-700 !important;
+  }
+
+  .blocklyTreeIcon {
+    @apply opacity-75 transition-all duration-200 !important;
+  }
+
+  .blocklyTreeRow:hover .blocklyTreeIcon {
+    @apply opacity-100 !important;
+  }
+
+  /* Flyout Panel */
+  .blocklyFlyout {
+    @apply shadow-xl !important;
+  }
+
+  .blocklyFlyoutBackground {
+    @apply fill-white/95 !important;
+  }
+
+  /* Block Styling */
+  .blocklyDraggable {
+    @apply transition-all duration-200 ease-out cursor-grab active:cursor-grabbing;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
+
+  .blocklyDraggable:hover {
+    @apply scale-[1.02];
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+  }
+
+  .blocklySelected > .blocklyPath {
+    @apply stroke-2 !important;
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.2));
+  }
+
+  /* Connection Points */
+  .blocklyConnection {
+    @apply transition-all duration-150 !important;
+  }
+
+  .blocklyConnectionHighlight {
+    @apply fill-primary/30 !important;
+  }
+
+  /* Workspace Elements */
+  .injectionDiv {
+    @apply rounded-lg overflow-hidden;
+  }
+
+  /* Block Text */
+  .blocklyText {
+    @apply font-medium !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+
+  /* Input Fields */
+  .blocklyEditableText > rect {
+    @apply rx-2 fill-white/50 stroke-none !important;
+  }
+
+  .blocklyEditableText > text {
+    @apply fill-gray-700 !important;
+  }
+
+  .blocklyEditableText:hover > rect {
+    @apply fill-white/80 !important;
+  }
+
+  /* Scrollbars */
+  .blocklyScrollbarHandle {
+    @apply bg-gray-400/30 hover:bg-gray-400/50 
+           transition-colors duration-150 rounded-full !important;
+  }
+
+  .blocklyScrollbarBackground {
+    @apply fill-transparent !important;
+  }
+
+  /* Workspace Controls */
+  .blocklyZoom > image,
+  .blocklyTrash > image {
+    @apply opacity-60 hover:opacity-100 transition-opacity duration-150 !important;
+  }
+
+  /* Block Shadows and Effects */
+  .blocklyDragging {
+    @apply scale-105;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+  }
+
+  /* Block Connections */
+  .blocklyHighlightedConnectionPath {
+    @apply stroke-primary/50 stroke-[3px] !important;
+  }
+
+  /* Workspace Grid */
+  .blocklyGrid {
+    @apply stroke-gray-200/40 !important;
+  }
+
+  /* Block Categories */
+  .blocklyTreeSeparator {
+    @apply border-gray-200/50 my-2 !important;
+  }
+
+  /* Tooltips */
+  .blocklyTooltipDiv {
+    @apply bg-gray-800/90 backdrop-blur-sm text-white rounded-lg shadow-xl 
+           px-4 py-2 text-sm border border-gray-700/50 !important;
+  }
+
+  /* Custom Block Shapes */
+  .blocklyPath {
+    @apply transition-all duration-200;
+  }
+
+  /* Block Input Fields */
+  .blocklyNumberField,
+  .blocklyTextInput {
+    @apply rounded-md border-2 border-transparent focus:border-primary/30 
+           transition-all duration-200 !important;
+  }
+
+  /* Block Comments */
+  .blocklyCommentTextarea {
+    @apply rounded-lg border-2 border-gray-200/50 focus:border-primary/30 
+           transition-all duration-200 resize-none !important;
+  }
+
+  /* Block Warning/Error States */
+  .blocklyInvalidInput {
+    @apply border-red-500/50 bg-red-50/50 !important;
+  }
+
+  .blocklyValidInput {
+    @apply border-green-500/50 bg-green-50/50 !important;
+  }
+}
+
+/* Additional Utility Classes */
+.shadow-soft {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-highlight {
+  box-shadow: 0 0 0 2px rgba(76, 81, 191, 0.1);
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Block Category Colors */
+.blocklyTreeIcon[style*="background-image"] {
+  @apply rounded-lg p-1 transition-transform duration-200;
+}
+
+.blocklyTreeRow:hover .blocklyTreeIcon[style*="background-image"] {
+  @apply scale-110;
+}
+
+/* Workspace Background Pattern */
+.workspace-grid {
+  background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+  background-size: 25px 25px;
+}
