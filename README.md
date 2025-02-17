@@ -1,4 +1,4 @@
-# Visual Code Studio - Block-Based Programming Environment
+# Blockly - Block-Based Programming Environment
 
 A modern, responsive web application that provides a visual programming environment using Blockly. This tool allows users to create programs by dragging and dropping blocks, making programming more accessible and intuitive.
 
